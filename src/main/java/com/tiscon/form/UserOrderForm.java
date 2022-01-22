@@ -2,9 +2,7 @@ package com.tiscon.form;
 
 import com.tiscon.validator.Numeric;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 
 /**
  * 顧客が入力する見積もり情報を保持するクラス。
@@ -18,6 +16,7 @@ public class UserOrderForm {
 
     @NotBlank
     @Numeric
+    @Size(max=11, min=10)
     private String tel;
 
     @Email
