@@ -16,6 +16,8 @@ public class UserOrderDto {
 
     private String newAddress;
 
+    private String month;
+
     private String box;
 
     private String bed;
@@ -48,6 +50,14 @@ public class UserOrderDto {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getMonth() {
+        return month;
+    }
+
+    public void setMonth(String month) {
+        this.month = month;
     }
 
     public String getOldPrefectureId() {

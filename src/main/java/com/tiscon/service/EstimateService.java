@@ -106,6 +106,12 @@ public class EstimateService {
 
        //     int pricePerTruck = estimateDAO.getPricePerTruck(boxes);}
 
+//        季節係数を計算
+        String month = dto.getMonth();
+        float pricePerMonth = estimateDAO.getPricePerMonth(month);
+
+
+
         // オプションサービスの料金を算出する。
         int priceForOptionalService = 0;
 
@@ -113,7 +119,7 @@ public class EstimateService {
             priceForOptionalService = estimateDAO.getPricePerOptionalService(OptionalServiceType.WASHING_MACHINE.getCode());
         }
 
-        return priceForDistance + pricePerTruck + priceForOptionalService;
+        return (int) Math.floor((priceForDistance + pricePerTruck) * pricePerMonth + priceForOptionalService);
     }
 
     /**

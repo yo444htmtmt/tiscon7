@@ -135,6 +135,14 @@ public class EstimateDao {
         return parameterJdbcTemplate.queryForObject(sql, paramSource, Integer.class);
     }
 
+    // 引っ越し日
+    public float getPricePerMonth(String month) {
+        String sql = "SELECT SEASON_COEFFICIENT FROM MOVEMONTH WHERE MOVE_MONTH = :month";
+
+        SqlParameterSource paramSource = new MapSqlParameterSource("month", month);
+        return parameterJdbcTemplate.queryForObject(sql, paramSource, Float.class);
+    }
+
     /**
      * オプションサービスの料金を取得する。
      *
