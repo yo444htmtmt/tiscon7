@@ -307,3 +307,15 @@ td {
     border-radius: .28571429rem;
     border: 1px solid rgba(34,36,38,.15);
 }
+
+.txt_example {
+    font-size: 93%;
+    color: #909090;
+}
+
+.txt_example2{
+    font-size: 93%;
+    color: #909090;
+    margin-top: 0.8em;
+}
+
